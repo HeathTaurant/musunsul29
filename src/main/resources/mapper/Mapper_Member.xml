@@ -4,6 +4,15 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.musunsul29.db.MapperMember">
+  
+	<insert id="insertMember" parameterType="com.musunsul29.DTOMember">
+	insert into member values(#{mem_id},#{mem_email},#{mem_pw},#{mem_phonnumber},#{mem_nickname},#{mem_name},#{mem_sex})
+	</insert>
 	
-
+	<update id="updateMember" parameterType="com.musunsul29.DTOMember">
+	update member set mem_email=#{mem_email}, mem_pw=#{mem_pw}, mem_phonnumber=#{mem_phonnumber}, mem_nickname=#{mem_nickname}, mem_name=#{mem_name}, mem_sex=#{mem_sex} where mem_id=#{mem_id}
+	</update>
+	
+	
+	
 </mapper>

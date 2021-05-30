@@ -4,7 +4,6 @@ import java.sql.Timestamp;
 
 public class DTOMember {
 	
-	private int mem_pk;
 	private String mem_id;
 	private String mem_email;
 	private String mem_pw;
@@ -13,12 +12,7 @@ public class DTOMember {
 	private String mem_name;
 	private String mem_sex;
 	
-	public int getMem_pk() {
-		return mem_pk;
-	}
-	public void setMem_pk(int mem_pk) {
-		this.mem_pk = mem_pk;
-	}
+
 	public String getMem_id() {
 		return mem_id;
 	}
