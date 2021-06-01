@@ -4,6 +4,14 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.musunsul29.db.MapperReview">
+	<insert id="insertreview" parameterType="com.musunsul29.DTOReview">
+	insert into review values(#{et_pk},#{re_date},#{mem_id},#{mem_nickname},#{re_star},#{re_like},#{re_tmi},#{re_image})
+	</insert>
+		
+		<update id="updatereview" parameterType="com.db.StudentDTO">
+		update review set er_pk = #{et_pk}, re_date = #{re_date}, mem_id = #{mem_id}, mem_nickname = #{mem_nickname}, 
+		re_star = #{re_star}, re_like = #{re_like}, re_tmi = #{re_tmi}, re_image = #{re_image} where re_pk = #{re_pk}
+	</update>
 	
-
+	
 </mapper>

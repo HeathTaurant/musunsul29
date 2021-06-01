@@ -1,0 +1,30 @@
+.Mainlayout {
+display : grid;
+grid-template-columns:0.5fr 2.5fr 0.5fr;
+grid-template-rows: 60px 1fr 120px;
+grid-template-areas:
+"Header Header Header"
+"Section Section Section"
+"Footer Footer Footer";
+height: 100vh;
+grid-gap: 10px;
+}
+
+.Mainlayout Header {
+    grid-area: Header;
+    border : 1px solid black;
+    background-color: rgb(228, 235, 135);
+    
+}
+
+.Mainlayout Section {
+    grid-area: Section;
+    border : 1px solid black;
+    background-color: rgb(235, 135, 177);
+}
+
+.Mainlayout Footer {
+    grid-area: Footer;
+    border : 1px solid black;
+    background-color: rgb(135, 215, 235);
+}
