@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.db.mapper.MemberMapper">
+	
+	 <select id="selectMember" resultType="member.DTOMember">
+		select * from member where mem_id = #{mem_id} and mem_pw = #{mem_pw} 
+	</select> 
+	
+	<select id="login" parameterType="map" resultType="member.DTOMember">
+		select * from member where mem_id = #{mem_id} and mem_pw = #{mem_pw} 
+	</select> 
+	
+	<insert id="insertMember"	parameterType="member.DTOMember">
+		insert into member(mem_id,mem_email,mem_pw,mem_phonnumber,mem_nickname,mem_name,mem_sex,mem_birthday,mem_age,mem_image)
+		 values(#{mem_id},#{mem_email},#{mem_pw},#{mem_phonnumber},#{mem_nickname},
+		#{mem_name},#{mem_sex},#{mem_birthday},#{mem_age},#{mem_image})
+	</insert>
+	
+	<update id="updateMember" 	parameterType="member.DTOMember">
+		update member set mem_email=#{mem_email}, mem_pw = #{mem_pw},mem_phonnumber = #{mem_phonnumber},mem_nickname = #{mem_nickname}
+		where mem_id = #{mem_id}	
+	</update>
+	
+	<delete id="deleteMember" parameterType="String">
+		delete from member where mem_id = #{mem_id} and mem_pw = #{mem_pw}	
+	</delete>
+	 
+</mapper>
