@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 .menu {
     position: absolute;
@@ -98,3 +99,8 @@
   box-shadow: none;
 }
 >>>>>>> Stashed changes
+=======
+.navbar-form{
+  padding: 5px 15px;
+  }
+>>>>>>> master
